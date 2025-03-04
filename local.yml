@@ -10,7 +10,10 @@
       changed_when: False
 
   tasks:
-    - include: tasks/users.yml
-    - include: tasks/cron.yml
-    - include: tasks/packages.yml
+    - name: Install tmux
+      apt:
+        name: tmux
+    #    - include: tasks/users.yml
+    #    - include: tasks/cron.yml
+    #    - include: tasks/packages.yml
 
